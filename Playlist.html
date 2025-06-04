@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/rwd.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Dancing+Script:wght@400..700&family=LXGW+WenKai+Mono+TC:wght@400;700&family=Lilita+One&family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+
+    <title>Hitomi</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light m_bg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">My Website</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="Index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.instagram.com/makayla.liu?igsh=MTd1aThvNzdrcjAyNQ==" target="_blank"><img class="social" src="pictures/ig.png" width="30" height="30"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/share/1C2Ec45AX3/" target="_blank"><img class="social" src="pictures/fb.png" width="28" height="28"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About.html">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Works.html">My Works</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Content
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="Playlist.html">My Playlist</a></li>
+                  <li><a class="dropdown-item" href="Gamelist.html">My Gamelist</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="Else.html">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+          <div class="radio">
+            <span>原神OST selection世を見渡す神岩の旅路</span>
+            <div class="music-btn">
+              <svg class="feather feather-play" width="24" height="24" fill="#333333" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" style="cursor:pointer;">
+              <path id="music-icon-path" d="M5 3l14 9-14 9V3z"/>
+            </svg>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="space"></div>
+      <div id="galaxy-cursor"></div>
+      <div id="run"></div>
+      <!-- 會動的卡 -->
+        <div class="container M_slide">
+          <input type="radio" name="slider" id="item-1" checked>
+          <input type="radio" name="slider" id="item-2">
+          <input type="radio" name="slider" id="item-3">
+          <div class="cards">
+            <label class="card" for="item-1" id="song-1">
+              <img src="pictures/MinorPiece.jpg" alt="song">
+            </label>
+            <label class="card" for="item-2" id="song-2">
+              <img src="pictures/Soloist.jpg" alt="song">
+            </label>
+            <label class="card" for="item-3" id="song-3">
+              <img src="pictures/Blade.jpg" alt="song">
+            </label>
+          </div>
+          <div class="player">
+            <div class="upper-part">
+              <div class="play-icon">
+                <svg width="20" height="20" fill="#7d54cb" stroke="#7d54cb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-play" viewBox="0 0 24 24">
+                  <defs/>
+                  <path d="M5 3l14 9-14 9V3z"/>
+                </svg>
+              </div>
+              <div class="info-area" id="test">
+                <label class="song-info" id="song-info-1">
+                  <div class="title"><a href="https://youtu.be/zul8B399nzA?si=1yaKv8pF6m51o7aA" target="_blank">Minor Piece</a></div>
+                  <div class="sub-line">
+                    <div class="subtitle">ZAQ</div>
+                    <div class="time">3:12</div>
+                  </div>
+                </label>
+                <label class="song-info" id="song-info-2"> 
+                  <div class="title"><a href="https://youtu.be/LZMJtJBntT0?si=eT9-CZriOYmzhyM7" target="_blank">Soloist</a></div>
+                  <div class="sub-line">
+                    <div class="subtitle">HonkaiStarRail</div>
+                    <div class="time">2:17</div>
+                  </div>
+                </label>
+                <label class="song-info" id="song-info-3">
+                  <div class="title"><a href="https://youtu.be/5cZ4EUhei2g?si=BL2I-LgmtpxTNSrO" target="_blank">Blade of Words</a></div>
+                  <div class="sub-line">
+                    <div class="subtitle">Rokudenashi</div>
+                    <div class="time">3:22</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+              <div class="progress-bar">
+                <span class="progress"></span>
+              </div>
+          </div>
+        </div>
+    
+      <section><div class="space"></div></section>
+      <!-- TNT清單 -->
+      <section>
+        <div class="container M_list">
+          <div class="row">
+            <div class="col-md-4 col-sm-12 album">
+              <img src="pictures/TNT.jpg" alt="">
+            </div>
+            <div class="col-md-8 col-sm-12 content4">
+              <h3>時代少年團<span>TNT</span></h3>
+              <ul>
+                <li>Official Weibo <a href="weibo.com/u/6620842908" target="_blank">weibo.com/u/6620842908</a></li>
+                <li>代表作 :要你管、朱雀、姐姐真漂亮</li>
+                <li>成員: 馬嘉祺、丁程鑫、 宋亞軒、劉耀文、張真源、嚴浩翔、賀峻霖</li>
+              </ul>
+              <div class="btnn">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="songTable">
+                  <svg width="32" height="24" viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M40 45 L75 5 L5 5 Z"
+                        fill="#202021"
+                        stroke="#202021"
+                        stroke-width="2"
+                        stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="collapse show" id="collapseOne">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">歌曲</th>
+                    <th scope="col">時間</th>
+                    <th scope="col">演出者</th>
+                    <th scope="col">專輯</th>
+                    <th scope="col">Youtube</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>只有我一個人覺得？</td>
+                    <td>3:35</td>
+                    <td>時代少年團TNT</td>
+                    <td>舞象之年</td>
+                    <td><a href="https://youtu.be/ZJglDnPYjy4?si=vg2ZqWijpfGY4JOP" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>要你管</td>
+                    <td>5:02</td>
+                    <td>時代少年團TNT</td>
+                    <td>舞象之年</td>
+                    <td><a href="https://youtu.be/kUxNNJuHJbo?si=AeJc_GGtrbhCiIPl" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>姐姐真漂亮</td>
+                    <td>3:12</td>
+                    <td>時代少年團TNT</td>
+                    <td>舞象之年</td>
+                    <td><a href="https://youtu.be/criOwjy7QKY?si=WvlDSL24orDHaok9" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>朱雀</td>
+                    <td>5:31</td>
+                    <td>時代少年團TNT</td>
+                    <td>烏托邦少年</td>
+                    <td><a href="https://youtu.be/uK9ufmoejrg?si=kE2iA0H16eYKJJus" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>絕配</td>
+                    <td>4:56</td>
+                    <td>時代少年團TNT</td>
+                    <td>烏托邦少年</td>
+                    <td><a href="https://youtu.be/jL1g0PRCvA8?si=TmiCEyE_BcEFflY1" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>哪吒</td>
+                    <td>4:11</td>
+                    <td>時代少年團TNT</td>
+                    <td>烏托邦少年</td>
+                    <td><a href="https://youtu.be/0QmUX9WlJZg?si=k5hRiKiupZ4CRnNf" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>理想之途</td>
+                    <td>3:32</td>
+                    <td>時代少年團TNT</td>
+                    <td>烏托邦少年</td>
+                    <td><a href="https://youtu.be/mrW7uqAK6s4?si=7puYFFBthkVIga6k" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>煙花升停在星夜</td>
+                    <td>3:22</td>
+                    <td>時代少年團TNT 宋亞軒 劉耀文</td>
+                    <td>烏托邦少年</td>
+                    <td><a href="https://youtu.be/iu1rS5mUIfI?si=fy89tekecdlzOfk1" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>樓外樓</td>
+                    <td>3:31</td>
+                    <td>時代少年團TNT</td>
+                    <td>叁重楼</td>
+                    <td><a href="https://youtu.be/PZcBj_NqAqk?si=NHtVhFpnpOgtnLOg" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>月夜狂想曲</td>
+                    <td>3:55</td>
+                    <td>時代少年團TNT</td>
+                    <td>叁重楼</td>
+                    <td><a href="https://youtu.be/1YjsLACoX6w?si=dBrMVj5oJf2-RE69" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>大時代</td>
+                    <td>3:46</td>
+                    <td>時代少年團TNT</td>
+                    <td>叁重楼</td>
+                    <td><a href="https://youtu.be/wwn80YbMNEc?si=ngAMtgtD-6FzWvOk" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>愛到1440</td>
+                    <td>3:21</td>
+                    <td>時代少年團TNT</td>
+                    <td>叁重楼</td>
+                    <td><a href="https://youtu.be/ce1mtdIAkVU?si=Zs8ywYB00i4IxrKy" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>臥室巨星</td>
+                    <td>4:15</td>
+                    <td>時代少年團TNT</td>
+                    <td>叁重楼</td>
+                    <td><a href="https://youtu.be/Sv5p19REr6M?si=tg4MrC6ZZ4TtJN0s" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>爆米花</td>
+                    <td>4:10</td>
+                    <td>時代少年團TNT</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/VYbljQ7qZno?si=uDAdgvWBv-ehP3Vm" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>鏡花水月</td>
+                    <td>3:36</td>
+                    <td>時代少年團TNT 張真源</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/THBe-Q5ESZs?si=saSP14YjJF_ZYxpT" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>體貼</td>
+                    <td>3:51</td>
+                    <td>時代少年團TNT 宋亞軒</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/5RLbcSEEy_A?si=_uFLp7-O8MMsaqgs" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>蜉蝣</td>
+                    <td>4:20</td>
+                    <td>時代少年團TNT 馬嘉祺</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/It6HFl-0-BA?si=QaJ9pd-P-4V9vvNf" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- J-pop -->
+      <section>
+        <div class="container M_list">
+          <div class="row">
+            <div class="col-md-4 col-sm-12 album">
+              <img src="pictures/Aimer.jpg" alt="">
+            </div>
+            <div class="col-md-8 col-sm-12 content4">
+              <h3>我愛動漫<span>J-pop</span></h3>
+              <ul>
+                <li>好久沒看了</li>
+                <li>看什麼聽什麼</li>
+                <li>也不是全部，還有遊戲</li>
+              </ul>
+              <div class="btnn">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="songTable">
+                  <svg width="32" height="24" viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M40 45 L75 5 L5 5 Z"
+                        fill="#202021"
+                        stroke="#202021"
+                        stroke-width="2"
+                        stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="collapse show" id="collapseTwo">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">歌曲</th>
+                    <th scope="col">時間</th>
+                    <th scope="col">演出者</th>
+                    <th scope="col">專輯</th>
+                    <th scope="col">Youtube</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>MASAYUME CHASING</td>
+                    <td>3:40</td>
+                    <td>BoA</td>
+                    <td>Who's Back?</td>
+                    <td><a href="https://youtu.be/G0gD9jzYtEA?si=kFONdFsa3mbtJO7i" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Catch the Moment</td>
+                    <td>4:45</td>
+                    <td>LiSA</td>
+                    <td>LiVE is Smile Always -NEVER ENDiNG GLORY- [the Sun] at YOKOHAMA ARENA</td>
+                    <td><a href="https://youtu.be/LJkn2qqtijk?si=Vp_ShQSidfFj5ke8" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>BOW AND ARROW</td>
+                    <td>3:17</td>
+                    <td>米津玄師 Kenshi Yonezu</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/M-Eyhjkepy0?si=HvF_YdmNcGtRO6Io" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Kiss Kitsune</td>
+                    <td>3:05</td>
+                    <td>HIMEHINA</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/GgOOykZcfnI?si=FCIggKdlDsbeKqdU" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Don't say "lazy"</td>
+                    <td>4:23</td>
+                    <td>櫻高輕音部</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/5CSNv9MNEC4?si=y8FciXT0cICcZtzX" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>未完成ランデヴー</td>
+                    <td>2:55</td>
+                    <td>Lezel</td>
+                    <td>「かつて魔法少女と悪は敵対していた。」Music Collection</td>
+                    <td><a href="https://youtu.be/ZmhTiLioEnI?si=iPTCpO9jxAtpR-_A" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>ツキアカリのミチシルベ</td>
+                    <td>3:57</td>
+                    <td>ステレオポニー</td>
+                    <td> OVER THE BORDER</td>
+                    <td><a href="https://youtu.be/BYFp9T4_8lQ?si=Jmi-xm1YFfCa3cSN" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Blue Bird</td>
+                    <td>3:33</td>
+                    <td>生物股長</td>
+                    <td>My song Your song</td>
+                    <td><a href="https://youtu.be/O9Lq-IwfxTs?si=wJ9lPGLqQF7r9zUw" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>恋は戦争</td>
+                    <td>3:31</td>
+                    <td>プロセカ 小豆沢こはね、白石杏、初音ミク</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/IS6nnuRX3xQ?si=ej72Lv_8Cfykyt6k" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>Bad Apple!!</td>
+                    <td>3:51</td>
+                    <td>feat.SEKAI / 25時、ナイトコードで。 × 初音ミク</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/v-fc1zv31zE?si=Dk8HMsnHC4YFb0Py" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>Fatal</td>
+                    <td>3:38</td>
+                    <td>GEMN</td>
+                    <td>Fatal</td>
+                    <td><a href="https://youtu.be/8tQiWHXSGN0?si=sQp9G4ii6LDq5AGw" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>メフィスト(Mephisto)</td>
+                    <td>4:16</td>
+                    <td>女王蜂</td>
+                    <td>悪</td>
+                    <td><a href="https://youtu.be/Yo83M-KOc7k?si=PwVAMpRH7wxjrPA9" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>01(ZERO ICHI)</td>
+                    <td>3:13</td>
+                    <td>女王蜂</td>
+                    <td>悪</td>
+                    <td><a href="https://youtu.be/boq4EJv5YvM?si=Hp-2TA30cVOxxAvg" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>モラトリアム</td>
+                    <td>4:56</td>
+                    <td>Omoinotake</td>
+                    <td>Ammolite</td>
+                    <td><a href="https://youtu.be/C50EsUARJfc?si=GUE94YzhgvHIxY3X" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>Sakuramitsutsuki</td>
+                    <td>3:36</td>
+                    <td>SPYAIR</td>
+                    <td>MILLION</td>
+                    <td><a href="https://youtu.be/CpGPYFU4n0Y?si=AIPY91gLivAbxsX9" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>レイニースノードロップ </td>
+                    <td>4:05</td>
+                    <td>Re:nG feat. KAITO</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/XQh5Uf5itkI?si=OlOKhYC2tNxzfzbA" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>LAST STARDUST</td>
+                    <td>5:18</td>
+                    <td>Aimer</td>
+                    <td>DAWN</td>
+                    <td><a href="https://youtu.be/ngm99aJh7ig?si=M037IUYKIApIs0zP" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>Call your name</td>
+                    <td>4:28</td>
+                    <td>Mpi、 CASG (Caramel Apple Sound Gadget)、 SawanoHiroyuki[nZk]</td>
+                    <td>Attack on Titan (Original Soundtrack)</td>
+                    <td><a href="https://youtu.be/oLyXJHsYCq8?si=XS82hsLQCT5A3l6O" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>記憶の旅</td>
+                    <td>4:18</td>
+                    <td>HOYO-MiX feat.中島美嘉</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/yCc0bpbsPgo?si=0emJZWkkfhXJGO6L" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 校園偶像 -->
+      <section>
+        <div class="container M_list">
+          <div class="row">
+            <div class="col-md-4 col-sm-12 album">
+              <img src="pictures/Take.jpg" alt="">
+            </div>
+            <div class="col-md-8 col-sm-12 content4">
+              <h3>校園偶像<span></span></h3>
+              <ul>
+                <li>還在中文配音時期</li>
+                <li>還有在電視上看</li>
+                <li>好像混入了什麼</li>
+              </ul>
+              <div class="btnn">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="songTable">
+                  <svg width="32" height="24" viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M40 45 L75 5 L5 5 Z"
+                        fill="#202021"
+                        stroke="#202021"
+                        stroke-width="2"
+                        stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="collapse show" id="collapseThree">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">歌曲</th>
+                    <th scope="col">時間</th>
+                    <th scope="col">演出者</th>
+                    <th scope="col">專輯</th>
+                    <th scope="col">Youtube</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Take Me Higher</td>
+                    <td>4:04</td>
+                    <td>Tristar 神崎美月, 一之瀨楓, 藤堂百合華</td>
+                    <td>Nature Rhythm</td>
+                    <td><a href="https://youtu.be/w7jHEa5BWNU?si=RiViO7A0xpjikp_S" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>硝子ドール(Glass Doll)</td>
+                    <td>6:24</td>
+                    <td>藤堂百合華</td>
+                    <td>TVアニメ/データカードダス『アイカツ!』主題歌/挿入歌 1年目</td>
+                    <td><a href="https://youtu.be/onYTIYgaenc?si=jrOGyUl-RSCOGDpq" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>START:DASH!!</td>
+                    <td>4:19</td>
+                    <td>μ's</td>
+                    <td>Notes of School idol days</td>
+                    <td><a href="https://youtu.be/8nr4pKmGsbM?si=PgtHqmHd81SeCORU" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>soldier game</td>
+                    <td>3:41</td>
+                    <td>西木野真姫、園田海未、絢瀬絵里</td>
+                    <td>soldier game</td>
+                    <td><a href="https://youtu.be/Ot2LMV0d1Ac?si=Z4GvI6q25-NzDvd8" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Shocking Party </td>
+                    <td>3:27</td>
+                    <td>A-RISE</td>
+                    <td>Notes of School idol days:Glory</td>
+                    <td><a href="https://youtu.be/ZhKF0Dh_Wig?si=1-hZPD61-G97byYF" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Private Wars</td>
+                    <td>3:26</td>
+                    <td>A-RISE</td>
+                    <td>Notes of School idol days</td>
+                    <td><a href="https://youtu.be/jcF2yXlasjc?si=qBxQs5RhbQXigGQl" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Snow halation</td>
+                    <td>4:19</td>
+                    <td>μ's</td>
+                    <td>μ's Best Album Best Live! collection</td>
+                    <td><a href="https://youtu.be/OzGVz1ClxIc?si=s7upZRF1sdKbsgMV" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>僕らは今のなかで</td>
+                    <td>4:36</td>
+                    <td>μ's</td>
+                    <td>Notes of School idol days</td>
+                    <td><a href="https://youtu.be/KEt6LEPFlHs?si=Zj2xUpm4_MJ4SkcH" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>輝夜の城で踊りたい</td>
+                    <td>4:34</td>
+                    <td>μ's</td>
+                    <td>Best Live! Collection Ⅱ</td>
+                    <td><a href="https://youtu.be/VTKMRBPCut0?si=O-yFR7I43l0j7F6i" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>ユメノトビラ</td>
+                    <td>4:52</td>
+                    <td>μ's</td>
+                    <td>μ's Best Album Best Live! Collection II</td>
+                    <td><a href="https://youtu.be/8fAjUvOfnRo?si=PxB0L84BjvRbaMDZ" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>鼓動</td>
+                    <td>4:49</td>
+                    <td>七海露西亞、寶生波音、洞院莉娜</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/9IP8ReYW1k4?si=0MB3EIvCJyuZojPZ" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>Piece Of Love</td>
+                    <td>4:35</td>
+                    <td>洞院莉娜</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/Yo83M-KOc7k?si=PwVAMpRH7wxjrPA9" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>Beautiful Wish</td>
+                    <td>4:27</td>
+                    <td>星羅</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/NmzKcm83JeY?si=278VNE113As1bo00" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>黑暗的巴洛克</td>
+                    <td>3:42</td>
+                    <td>黑美人姊妹花 </td>
+                    <td></td>
+                    <td><a href="https://youtu.be/tEOuy-8kADA?si=xijrBW5_kQQyuNEy" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>懷抱著羽翼</td>
+                    <td>4:12</td>
+                    <td>米凱爾 </td>
+                    <td></td>
+                    <td><a href="https://youtu.be/CSTJD0g2X7k?si=KBmCISnMAnoOPlba" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>Return To The Sea</td>
+                    <td>5:24</td>
+                    <td>沙羅 </td>
+                    <td></td>
+                    <td><a href="https://youtu.be/q3_cZUoYWPc?si=DaAgluV1F1GupCFw" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>Switch On My Heart</td>
+                    <td>3:45</td>
+                    <td>高峰美音</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/tendpGodTfo?si=kHiWhV_SlLDdPzEu" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>Shall we go</td>
+                    <td>2:46</td>
+                    <td> 久里須要</td>
+                    <td></td>
+                    <td><a href="https://youtu.be/Ofj5KRUxOIc?si=YMJxL_yN41mNfSvx" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>Sweet Romance</td>
+                    <td>3:48</td>
+                    <td> 五條真由美</td>
+                    <td>Trilogy</td>
+                    <td><a href="https://youtu.be/QF1wgzwPRJg?si=jpdC07ZyE-C2g2pj" target="_blank"><img src="pictures/youtube.png" alt=""></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <br/>
+        <br/>
+        <div class="time">
+          <p>現在時間：<span id="datetime"></span></p>
+        </div>
+        <br/>
+    </section>
+
+
+      
+      <!-- 放在 body 最後面 -->
+      
+      <audio id="backmusic" src="music/genshin.mp3" loop></audio>
+      <audio id="audio-player"></audio>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <script src="css/rwd.js"></script>
+    <script src="css/Move.js"></script>
+    <script src="css/time.js"></script>
+    <script src="css/bkmusic.js"></script>
+  </body>
+</html>
